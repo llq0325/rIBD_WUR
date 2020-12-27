@@ -54,7 +54,7 @@ java -Xmx32768m -jar ${beagle}  gt=${vcf}.filtered.recode.vcf.gz  out=${vcf}.fil
 ### --- STEP5:REFINED IBD
 refine="/home/WUR/wu090/Install/beagle/refined-ibd.16May19.ad5.jar"
 #The "window" parameter must be at least 3 times the "ibd" parameter
-java -Xmx36409m -jar ${refine} gt=${vcf}.filtered.recode.phased_B5.vcf.gz map=gal6_CHR${chr}.New.map out=LOD3_${vcf}.10k.filtered.recode.phased_B5.vcf.gz \
+java -Xmx36409m -jar ${refine} gt=${vcf}.filtered.recode.phased_B5.vcf.gz map=gal6_CHR${chr}.map out=LOD3_${vcf}.10k.filtered.recode.phased_B5.vcf.gz \
 length=0.02 window=0.06 lod=3 nthreads=12 trim=0.001
 
 cd ..
